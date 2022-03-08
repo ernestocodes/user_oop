@@ -16,6 +16,7 @@ class User:
     def make_transfer(self, amount, friend):
         self.balance -= amount
         friend.balance += amount
+        print(f"{self.name} has {self.balance} remaining. {friend.name} has {friend.balance} remaining.")
 
 ernesto = User("Ernesto")
 michael = User("Michael")
@@ -35,4 +36,3 @@ henry.make_withdrawal (200)
 henry.make_withdrawal (200)
 henry.display_user_balance()
 ernesto.make_transfer(200, michael)
-michael.display_user_balance() 
